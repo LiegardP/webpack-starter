@@ -1,1 +1,1 @@
-# typescript-starter
+# webpack-starter
