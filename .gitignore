@@ -5,6 +5,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
+nodes_modules
 # Optional npm cache directory
 .npm
 
