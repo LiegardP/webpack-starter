@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 let config = {
     entry: "./src/js/index.js",
@@ -11,13 +13,19 @@ let config = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack 4 Starter',
-            template: 'src/index.html',
+            template: 'dist/index.html',
             inject: true,
             minify: {
                 removeComments: true,
                 collapseWhitespace: false
             }
-        })
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'style.css'
+        }),
+        new CopyWebpackPlugin([
+            { from: 'src/images', to: 'images' }
+        ])
     ],
     resolve: {extensions: ['.js', '.ts']},
     module: {
@@ -38,10 +46,22 @@ let config = {
             {                
                 test: [/.css$|.scss$/],                
                 use:[                    
-                    'style-loader',                  
+                    MiniCssExtractPlugin.loader,                  
                     'css-loader',
-                    'sass-loader'
+                    'sass-loader',
                 ]            
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: './dist/images'
+                    }
+                  }
+                ]
             }
         ]
     },

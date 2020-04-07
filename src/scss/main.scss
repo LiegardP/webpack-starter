@@ -1,5 +1,8 @@
-$myColor: #f5f8fa;
+$myColor: #9c5fc7;
+$myBgColor: #f5f8fa;
 
 h1 {
-    background-color: $myColor;
+    background-color: $myBgColor;
+    color: $myColor;
+    user-select: none;
 }

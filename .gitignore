@@ -3,8 +3,9 @@
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
-!.vscode/extensions.json
+!.vscode/extensions.j
 
+nodes_modules
 # Optional npm cache directory
 .npm
 
