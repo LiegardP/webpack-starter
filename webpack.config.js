@@ -13,7 +13,7 @@ let config = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Webpack 4 Starter',
-            template: 'dist/index.html',
+            template: 'src/index.html',
             inject: true,
             minify: {
                 removeComments: true,
