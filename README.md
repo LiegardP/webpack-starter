@@ -35,4 +35,4 @@ npm run build:prod
 * Clear dashboard via [webpack-dashboard](https://www.npmjs.com/package/webpack-dashboard))
 * Code splitting (coming soon)
 
-### Complete tutorial coming soon !
+### Complete tutorial in how_to.md file !

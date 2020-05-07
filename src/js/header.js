@@ -1,10 +1,10 @@
 export class Header {
 
     constructor() {    
-        console.log(`This is header constructor`);  
+        console.log(`Header is instancied`);  
     }
     
-    getFirstHeading() {
-        return `Webpack Starter page`;
+    getHeaderText() {
+        return `Header class from js file`;
     }
 };
