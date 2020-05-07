@@ -1,4 +1,3 @@
-
 # Webpack Starterkit
 
 A webpack starterkit for frontend project including ES6, SASS and more...
